@@ -75,6 +75,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
@@ -374,6 +376,31 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setForeground(new java.awt.Color(255, 255, 255));
         jPanel10.setLayout(new java.awt.CardLayout());
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel41.setFont(new java.awt.Font("Gurmukhi MT", 0, 48)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel41.setText("Welcome");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(496, Short.MAX_VALUE)
+                .addComponent(jLabel41)
+                .addGap(412, 412, 412))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(279, 279, 279)
+                .addComponent(jLabel41)
+                .addContainerGap(277, Short.MAX_VALUE))
+        );
+
+        jPanel10.add(jPanel14, "card7");
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
         jPanel13.setFont(new java.awt.Font("Noto Sans NKo", 0, 36)); // NOI18N
@@ -1098,6 +1125,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel11.setVisible(true);
         jPanel12.setVisible(false);
         jPanel13.setVisible(false);
+        jPanel14.setVisible(false);
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
     }//GEN-LAST:event_openAddUserPage
@@ -1112,6 +1140,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel11.setVisible(false);
         jPanel12.setVisible(false);
         jPanel13.setVisible(true);
+        jPanel14.setVisible(false);
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
     }//GEN-LAST:event_openProfilePage
@@ -1126,6 +1155,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel11.setVisible(false);
         jPanel12.setVisible(true);
         jPanel13.setVisible(false);
+        jPanel14.setVisible(false);
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
     }//GEN-LAST:event_openViewUserPage
@@ -1140,6 +1170,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel11.setVisible(false);
         jPanel12.setVisible(false);
         jPanel13.setVisible(false);
+        jPanel14.setVisible(false);
         jPanel15.setVisible(false);
         jPanel16.setVisible(true);
     }//GEN-LAST:event_openDeleteUserPage
@@ -1326,6 +1357,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jPanel13.setVisible(false);
         jPanel16.setVisible(false);
         jPanel15.setVisible(true);
+        jPanel14.setVisible(false);
     }//GEN-LAST:event_openUpdateUserPage
 
     private void searchView(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchView
@@ -1786,6 +1818,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
@@ -1798,6 +1831,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
