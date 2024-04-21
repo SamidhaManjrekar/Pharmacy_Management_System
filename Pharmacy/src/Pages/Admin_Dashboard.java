@@ -431,6 +431,11 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel22.setText("User Name");
 
         jTextField7.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField7KeyTyped(evt);
+            }
+        });
 
         jTextField8.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
 
@@ -819,6 +824,11 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jTextField12.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
 
         jTextField13.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jTextField13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField13KeyTyped(evt);
+            }
+        });
 
         jTextField14.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
         jTextField14.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1188,27 +1198,24 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutButton
 
     private void checkUsername(String username) {
-        try {
-            Connection con = ConnectionProvider.getCon();
-            PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
-
-            if (!username.equals(currentUserName)) {
+        check = 0;
+        if (!username.isEmpty()) {
+            try {
+                Connection con = ConnectionProvider.getCon();
+                PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
                 stmt.setString(1, username);
-                try (ResultSet rs = stmt.executeQuery()) {
-                    if (rs.next()) {
-                        check = 1;
-                    } else {
-                        check = 0;
-                    }
+                ResultSet rs = stmt.executeQuery();
+                if (rs.next()) {
+                    check = 1;
+                } else {
+                    check = 0;
                 }
-            } else {
-                check = 0;
+                con.close();
+                stmt.close();
+                rs.close();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, e);
             }
-
-            stmt.close();
-            con.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "An error occurred while checking username.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -1243,6 +1250,12 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         if (check == 1) {
             JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
             jTextField2.setText("");
+        }
+
+        if (!email.matches(emailPattern)) {
+            JOptionPane.showMessageDialog(null, "Email field is invalid");
+            jTextField3.setText("");
+            return;
         }
 
         if (phone.length() != 10 || !phone.matches(phonePattern)) {
@@ -1457,11 +1470,18 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             return;
         }
 
-        checkUsername(username);
-        if (check == 1) {
-            JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
-            jTextField7.setText("");
+        if (!email.matches(emailPattern)) {
+            JOptionPane.showMessageDialog(null, "Email field is invalid");
+            jTextField10.setText("");
             return;
+        }
+        if (flag == 1) {
+            checkUsername(username);
+            if (check == 1) {
+                JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
+                jTextField7.setText("");
+                return;
+            }
         }
         try {
             Connection con = ConnectionProvider.getCon();
@@ -1524,11 +1544,17 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             return;
         }
 
-        checkUsername(userName);
-        if (check == 1) {
-            JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
-            jTextField13.setText("");
+        if (!email.matches(emailPattern)) {
+            JOptionPane.showMessageDialog(null, "Email field is invalid");
+            jTextField16.setText("");
             return;
+        }
+        if (flag == 1) {
+            if (check == 1) {
+                JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
+                jTextField13.setText("");
+                return;
+            }
         }
         try {
             Connection con = ConnectionProvider.getCon();
@@ -1746,6 +1772,16 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Name cannot be changed!");
     }//GEN-LAST:event_jTextField14KeyTyped
 
+    private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
+        // TODO add your handling code here:
+        flag = 1;
+    }//GEN-LAST:event_jTextField7KeyTyped
+
+    private void jTextField13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField13KeyTyped
+        // TODO add your handling code here:
+        flag = 1;
+    }//GEN-LAST:event_jTextField13KeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -1882,6 +1918,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String currentUserName = "";
     private int check;
+    private int flag = 0;
     private Color DefaultColor, ClickedColor;
     private final String phonePattern = "^[0-9]*$";
+    private final String emailPattern = "^[a-zA-Z0-9._%+-]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z0-9]+$";
 }

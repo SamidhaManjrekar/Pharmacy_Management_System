@@ -526,6 +526,11 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jLabel26.setText("User Name");
 
         jTextField7.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField7KeyTyped(evt);
+            }
+        });
 
         jTextField8.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
 
@@ -1424,25 +1429,24 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_openViewBillPage
 
     private void checkUsername(String username) {
-        if (!username.equals(userName)) {
+        check = 0;
+        if (!username.isEmpty()) {
             try {
                 Connection con = ConnectionProvider.getCon();
                 PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
                 stmt.setString(1, username);
-                try (ResultSet rs = stmt.executeQuery()) {
-                    if (rs.next()) {
-                        check = 1;
-                    } else {
-                        check = 0;
-                    }
+                ResultSet rs = stmt.executeQuery();
+                if (rs.next()) {
+                    check = 1;
+                } else {
+                    check = 0;
                 }
-                stmt.close();
                 con.close();
+                stmt.close();
+                rs.close();
             } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, "An error occurred while checking username.", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, e);
             }
-        } else {
-            check = 0;
         }
     }
 
@@ -1482,15 +1486,17 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
         if (!email.matches(emailPattern)) {
             JOptionPane.showMessageDialog(this, "Invalid email ID!", "Error", JOptionPane.ERROR_MESSAGE);
-            jTextField9.setText("");
+            jTextField10.setText("");
             return;
         }
 
-        checkUsername(username);
-        if (check == 1) {
-            JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
-            jTextField7.setText("");
-            return;
+        if (flag == 1) {
+            checkUsername(username);
+            if (check == 1) {
+                JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
+                jTextField7.setText("");
+                return;
+            }
         }
         try {
             Connection con = ConnectionProvider.getCon();
@@ -2069,6 +2075,11 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Item name cannot be changed!");
     }//GEN-LAST:event_jTextField13KeyTyped
 
+    private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
+        // TODO add your handling code here:
+        flag = 1;
+    }//GEN-LAST:event_jTextField7KeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -2215,12 +2226,13 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String userName = "";
     private int check;
+    private int flag = 0;
     private int finalTotalPrice = 0;
     private String billId = "";
     private Color DefaultColor, ClickedColor;
     private final String numberPattern = "^[0-9]*$";
     private final String phonePattern = "^[0-9]*$";
-    private final String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+    private final String emailPattern = "^[a-zA-Z0-9._%+-]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z0-9]+$";
     private static int billCounter = 1; // Initialize a counter for the bill IDs
 
     private String getUniqueId(String prefix) {
