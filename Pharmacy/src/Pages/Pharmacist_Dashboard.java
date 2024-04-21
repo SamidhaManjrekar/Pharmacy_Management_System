@@ -1424,11 +1424,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_openViewBillPage
 
     private void checkUsername(String username) {
-         try {
-            Connection con = ConnectionProvider.getCon();
-            PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
-
-            if (!username.equals(userName)) {
+        if (!username.equals(userName)) {
+            try {
+                Connection con = ConnectionProvider.getCon();
+                PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
                 stmt.setString(1, username);
                 try (ResultSet rs = stmt.executeQuery()) {
                     if (rs.next()) {
@@ -1437,14 +1436,13 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                         check = 0;
                     }
                 }
-            } else {
-                check = 0;
+                stmt.close();
+                con.close();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "An error occurred while checking username.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
-            stmt.close();
-            con.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "An error occurred while checking username.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            check = 0;
         }
     }
 
@@ -2011,7 +2009,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 tb1.addCell("Company Name");
                 tb1.addCell("Price Per Units");
                 tb1.addCell("No. Of Units");
-                tb1.addCell("Sub Total Price"); 
+                tb1.addCell("Sub Total Price");
                 for (int i = 0; i < cartTable.getRowCount(); i++) {
                     String a = cartTable.getValueAt(i, 0).toString();
                     String b = cartTable.getValueAt(i, 1).toString();
@@ -2025,7 +2023,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                     tb1.addCell(d);
                     tb1.addCell(e);
                     tb1.addCell(f);
-                } 
+                }
                 doc.add(tb1);
 
                 doc.add(starLine);

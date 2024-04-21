@@ -35,6 +35,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         // Parameterized constructor
         initComponents();
         setLocationRelativeTo(null);
+        currentUserName = userName;
         jLabel3.setText(name);
         DefaultColor = new Color(153, 217, 217);
         ClickedColor = new Color(81, 182, 182);
@@ -1426,7 +1427,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         // To update the admin information
 
         String name = jTextField6.getText();
-        String userName = jTextField7.getText();
+        String username = jTextField7.getText();
         String password = jTextField8.getText();
         String email = jTextField10.getText();
         String phone = jTextField9.getText();
@@ -1445,7 +1446,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             dateOfBirth = dFormat.format(selectedDate);
         }
 
-        if (name.isEmpty() || userName.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
+        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -1456,7 +1457,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             return;
         }
 
-        checkUsername(userName);
+        checkUsername(username);
         if (check == 1) {
             JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
             jTextField7.setText("");
@@ -1466,7 +1467,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             Connection con = ConnectionProvider.getCon();
             String sql = "UPDATE USER SET UserName = ?, Password = ?, DateOfBirth = ?, address = ?, phone = ?, email = ? WHERE name = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, userName);
+            stmt.setString(1, username);
             stmt.setString(2, password);
             stmt.setString(3, dateOfBirth);
             stmt.setString(4, address);
@@ -1490,46 +1491,46 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
     private void updateButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButton
         //To update the user information
+
+        String role = (String) jComboBox2.getSelectedItem();
+        String name = jTextField14.getText();
+        String userName = jTextField13.getText();
+        String password = jTextField12.getText();
+        String email = jTextField16.getText();
+        String phone = jTextField15.getText();
+        String address = jTextArea3.getText();
+        String dateOfBirth = "";
+        Date selectedDate = jDateChooser3.getDate();
+        Date currentDate = new Date();
+
+        if (selectedDate != null) {
+            if (selectedDate.after(currentDate)) {
+                JOptionPane.showMessageDialog(this, "Invalid Date Of Birth!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
+            dateOfBirth = dFormat.format(selectedDate);
+        }
+
+        if (name.isEmpty() || userName.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (phone.length() != 10 || !phone.matches(phonePattern)) {
+            JOptionPane.showMessageDialog(this, "Invalid phone number!", "Error", JOptionPane.ERROR_MESSAGE);
+            jTextField15.setText("");
+            return;
+        }
+
+        checkUsername(userName);
+        if (check == 1) {
+            JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
+            jTextField13.setText("");
+            return;
+        }
         try {
-            String role = (String) jComboBox2.getSelectedItem();
-            String name = jTextField14.getText();
-            String userName = jTextField13.getText();
-            String password = jTextField12.getText();
-            String email = jTextField16.getText();
-            String phone = jTextField15.getText();
-            String address = jTextArea3.getText();
-            String dateOfBirth = "";
-            Date selectedDate = jDateChooser3.getDate();
-            Date currentDate = new Date();
-
-            if (selectedDate != null) {
-                if (selectedDate.after(currentDate)) {
-                    JOptionPane.showMessageDialog(this, "Invalid Date Of Birth!", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-
-                SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
-                dateOfBirth = dFormat.format(selectedDate);
-            }
-
-            if (name.isEmpty() || userName.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
-            if (phone.length() != 10 || !phone.matches(phonePattern)) {
-                JOptionPane.showMessageDialog(this, "Invalid phone number!", "Error", JOptionPane.ERROR_MESSAGE);
-                jTextField15.setText("");
-                return;
-            }
-
-            checkUsername(userName);
-            if (check == 1) {
-                JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
-                jTextField13.setText("");
-                return;
-            }
-
             Connection con = ConnectionProvider.getCon();
             String sql = "UPDATE USER SET UserName = ?, Password = ?, DateOfBirth = ?, address = ?, phone = ?, email = ?, role = ? WHERE name = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
