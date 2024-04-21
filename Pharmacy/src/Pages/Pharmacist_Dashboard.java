@@ -1735,8 +1735,6 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 int rowsUpdated = ps.executeUpdate();
                 if (rowsUpdated > 0) {
                     JOptionPane.showMessageDialog(null, "Medicine updated successfully");
-                    setVisible(false);
-                    new Update_Item().setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "Failed to update medicine");
                 }

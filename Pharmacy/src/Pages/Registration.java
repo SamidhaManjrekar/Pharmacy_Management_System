@@ -288,7 +288,7 @@ public class Registration extends javax.swing.JFrame {
                 stmt.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Account created successfully!");
                 setVisible(false);
-                new PharmacistDashboard(userName, name).setVisible(true);
+                new Pharmacist_Dashboard(userName, name).setVisible(true);
 
                 con.close();
                 stmt.close();
