@@ -1424,17 +1424,23 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_openViewBillPage
 
     private void checkUsername(String username) {
-        try {
+         try {
             Connection con = ConnectionProvider.getCon();
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
-            stmt.setString(1, username);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                check = 1;
+
+            if (!username.equals(userName)) {
+                stmt.setString(1, username);
+                try (ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        check = 1;
+                    } else {
+                        check = 0;
+                    }
+                }
             } else {
                 check = 0;
             }
-            rs.close();
+
             stmt.close();
             con.close();
         } catch (SQLException e) {

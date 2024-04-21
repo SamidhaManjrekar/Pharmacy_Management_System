@@ -1187,17 +1187,25 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutButton
 
     private void checkUsername(String username) {
-        try (Connection con = ConnectionProvider.getCon(); PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?")) {
-            stmt.setString(1, username);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
 
-                    check = 1;
-                } else {
-
-                    check = 0;
+            if (!username.equals(currentUserName)) {
+                stmt.setString(1, username);
+                try (ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        check = 1;
+                    } else {
+                        check = 0;
+                    }
                 }
+            } else {
+                check = 0;
             }
+
+            stmt.close();
+            con.close();
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "An error occurred while checking username.", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -1871,7 +1879,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
-
+    private String currentUserName = "";
     private int check;
     private Color DefaultColor, ClickedColor;
     private final String phonePattern = "^[0-9]*$";
