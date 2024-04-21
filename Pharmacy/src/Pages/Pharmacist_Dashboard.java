@@ -1,5 +1,6 @@
 package Pages;
 
+import com.itextpdf.text.DocumentException;
 import dao.ConnectionProvider;
 import java.awt.Color;
 import java.sql.Connection;
@@ -17,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import dao.PharmacyUtils;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.sql.Statement;
 
@@ -85,6 +87,8 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
         jPanel12 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
@@ -226,7 +230,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(153, 217, 217));
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel6MousePressed(evt);
+                openPharmacistProfilePage(evt);
             }
         });
 
@@ -254,7 +258,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(153, 217, 217));
         jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel9MousePressed(evt);
+                openViewItemsPage(evt);
             }
         });
 
@@ -282,7 +286,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(153, 217, 217));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel5MousePressed(evt);
+                openAddItemsPage(evt);
             }
         });
 
@@ -310,7 +314,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(153, 217, 217));
         jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel7MousePressed(evt);
+                openUpdateItemsPage(evt);
             }
         });
 
@@ -338,7 +342,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(153, 217, 217));
         jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel8MousePressed(evt);
+                openCreateOrderPage(evt);
             }
         });
 
@@ -366,7 +370,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(153, 217, 217));
         jPanel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel10MousePressed(evt);
+                openLoginPage(evt);
             }
         });
 
@@ -395,7 +399,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(153, 217, 217));
         jPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel11MousePressed(evt);
+                openViewBillPage(evt);
             }
         });
 
@@ -469,6 +473,31 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new java.awt.CardLayout());
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel36.setFont(new java.awt.Font("Gurmukhi MT", 0, 48)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel36.setText("Welcome");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addContainerGap(496, Short.MAX_VALUE)
+                .addComponent(jLabel36)
+                .addGap(412, 412, 412))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGap(279, 279, 279)
+                .addComponent(jLabel36)
+                .addContainerGap(347, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel18, "card8");
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -865,6 +894,11 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Medicine", "Medical tool" }));
 
         jTextField13.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jTextField13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField13KeyTyped(evt);
+            }
+        });
 
         jTextField17.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
         jTextField17.setForeground(new java.awt.Color(102, 102, 102));
@@ -890,7 +924,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jButton5.setText("Update");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5updateButton(evt);
+                updateItemButton(evt);
             }
         });
 
@@ -1275,7 +1309,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MousePressed
+    private void openPharmacistProfilePage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openPharmacistProfilePage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(ClickedColor);
         jPanel7.setBackground(DefaultColor);
@@ -1289,9 +1323,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
         jPanel17.setVisible(false);
-    }//GEN-LAST:event_jPanel6MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openPharmacistProfilePage
 
-    private void jPanel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MousePressed
+    private void openViewItemsPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openViewItemsPage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(DefaultColor);
@@ -1305,9 +1340,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
         jPanel17.setVisible(false);
-    }//GEN-LAST:event_jPanel9MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openViewItemsPage
 
-    private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MousePressed
+    private void openAddItemsPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openAddItemsPage
         jPanel5.setBackground(ClickedColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(DefaultColor);
@@ -1321,9 +1357,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
         jPanel17.setVisible(false);
-    }//GEN-LAST:event_jPanel5MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openAddItemsPage
 
-    private void jPanel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MousePressed
+    private void openUpdateItemsPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openUpdateItemsPage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(ClickedColor);
@@ -1337,9 +1374,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(true);
         jPanel16.setVisible(false);
         jPanel17.setVisible(false);
-    }//GEN-LAST:event_jPanel7MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openUpdateItemsPage
 
-    private void jPanel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MousePressed
+    private void openCreateOrderPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openCreateOrderPage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(DefaultColor);
@@ -1353,9 +1391,10 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(false);
         jPanel16.setVisible(true);
         jPanel17.setVisible(false);
-    }//GEN-LAST:event_jPanel8MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openCreateOrderPage
 
-    private void jPanel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MousePressed
+    private void openLoginPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openLoginPage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(DefaultColor);
@@ -1365,9 +1404,9 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel11.setBackground(DefaultColor);
         setVisible(false);
         new Login().setVisible(true);
-    }//GEN-LAST:event_jPanel10MousePressed
+    }//GEN-LAST:event_openLoginPage
 
-    private void jPanel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MousePressed
+    private void openViewBillPage(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openViewBillPage
         jPanel5.setBackground(DefaultColor);
         jPanel6.setBackground(DefaultColor);
         jPanel7.setBackground(DefaultColor);
@@ -1381,21 +1420,21 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jPanel15.setVisible(false);
         jPanel16.setVisible(false);
         jPanel17.setVisible(true);
-    }//GEN-LAST:event_jPanel11MousePressed
+        jPanel18.setVisible(false);
+    }//GEN-LAST:event_openViewBillPage
 
     private void checkUsername(String username) {
         try {
             Connection con = ConnectionProvider.getCon();
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM USER WHERE username = ?");
             stmt.setString(1, username);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    check = 1;
-                } else {
-                    check = 0;
-                }
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                check = 1;
+            } else {
+                check = 0;
             }
-
+            rs.close();
             stmt.close();
             con.close();
         } catch (SQLException e) {
@@ -1427,12 +1466,18 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         }
 
         if (name.isEmpty() || username.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         if (phone.length() != 10 || !phone.matches(phonePattern)) {
             JOptionPane.showMessageDialog(this, "Invalid phone number!", "Error", JOptionPane.ERROR_MESSAGE);
+            jTextField9.setText("");
+            return;
+        }
+
+        if (!email.matches(emailPattern)) {
+            JOptionPane.showMessageDialog(this, "Invalid email ID!", "Error", JOptionPane.ERROR_MESSAGE);
             jTextField9.setText("");
             return;
         }
@@ -1603,7 +1648,6 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         //To search for user in view item page
 
         String search = jTextField18.getText();
-
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
@@ -1709,7 +1753,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_addItem
 
-    private void jButton5updateButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5updateButton
+    private void updateItemButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateItemButton
         String name = jTextField13.getText();
         String price = jTextField11.getText();
         String stock = jTextField12.getText();
@@ -1745,7 +1789,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
             }
         }
 
-    }//GEN-LAST:event_jButton5updateButton
+    }//GEN-LAST:event_updateItemButton
 
     private void showTableViewBill(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_showTableViewBill
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
@@ -1867,6 +1911,15 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_AddToCartButton
 
+    private void clearMedicineFields() {
+        txtUniqueId.setText("");
+        txtName.setText("");
+        txtCompanyName.setText("");
+        txtPricePerUnit.setText("");
+        txtNoOfUnits.setText("");
+        txtTotalPrice.setText("");
+    }
+
     private void medicineName(String nameOrUniqueId) {
         DefaultTableModel model = (DefaultTableModel) medicinesTable.getModel();
         model.setRowCount(0);
@@ -1880,15 +1933,6 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
-    }
-
-    private void clearMedicineFields() {
-        txtUniqueId.setText("");
-        txtName.setText("");
-        txtCompanyName.setText("");
-        txtPricePerUnit.setText("");
-        txtNoOfUnits.setText("");
-        txtTotalPrice.setText("");
     }
 
     public String UniqueId(String prefix) {
@@ -1961,7 +2005,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 tb1.addCell("Company Name");
                 tb1.addCell("Price Per Units");
                 tb1.addCell("No. Of Units");
-                tb1.addCell("Sub Total Price"); // Iterate through the cart table data and add each row to the PdfPTable
+                tb1.addCell("Sub Total Price"); 
                 for (int i = 0; i < cartTable.getRowCount(); i++) {
                     String a = cartTable.getValueAt(i, 0).toString();
                     String b = cartTable.getValueAt(i, 1).toString();
@@ -1975,14 +2019,14 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                     tb1.addCell(d);
                     tb1.addCell(e);
                     tb1.addCell(f);
-                } // Add the PdfPTable to the document
+                } 
                 doc.add(tb1);
 
                 doc.add(starLine);
                 Paragraph thanksMsg = new Paragraph("Thank you. Please Visit Again.");
                 doc.add(thanksMsg);
                 //OpenPdf.openById(String.valueOf(billId));
-            } catch (Exception e) {
+            } catch (DocumentException | FileNotFoundException e) {
                 JOptionPane.showMessageDialog(null, e);
             }
             doc.close();
@@ -2015,6 +2059,11 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Name cannot be changed!");
     }//GEN-LAST:event_jTextField6KeyTyped
+
+    private void jTextField13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField13KeyTyped
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Item name cannot be changed!");
+    }//GEN-LAST:event_jTextField13KeyTyped
 
     /**
      * @param args the command line arguments
@@ -2092,6 +2141,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
@@ -2117,6 +2167,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2165,7 +2216,8 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private Color DefaultColor, ClickedColor;
     private final String numberPattern = "^[0-9]*$";
     private final String phonePattern = "^[0-9]*$";
-    private static int billCounter = 1;// Initialize a counter for the bill IDs
+    private final String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+    private static int billCounter = 1; // Initialize a counter for the bill IDs
 
     private String getUniqueId(String prefix) {
         return prefix + billCounter++; // Concatenate the prefix with the current value of billCounter and then increment it
