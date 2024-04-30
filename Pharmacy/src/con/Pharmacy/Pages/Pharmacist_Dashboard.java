@@ -679,7 +679,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Item Name", "Item Type", "Price Per Unit", "Stock", "Manufacturer"
+                "Item Name", "Price Per Unit", "Stock", "Item type", "Manufacturer"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -1853,17 +1853,23 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
     private void txtNoOfUnitsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNoOfUnitsKeyReleased
         // TODO add your handling code here:
-        String noOfUnits = txtNoOfUnits.getText();
-        if (!noOfUnits.equals("")) {
-            String price = txtPricePerUnit.getText();
-            if (!noOfUnits.matches(numberPattern)) {
-                JOptionPane.showMessageDialog(null, "Number of units field is invalid.");
-            }
-            int totalPrice = Integer.parseInt(noOfUnits) * Integer.parseInt(price);
-            txtTotalPrice.setText(String.valueOf(totalPrice));
+    String noOfUnits = txtNoOfUnits.getText();
+    if (!noOfUnits.equals("")) {
+        String price = txtPricePerUnit.getText();
+        if (!noOfUnits.matches(numberPattern)) {
+            JOptionPane.showMessageDialog(null, "Number of units field is invalid.");
         } else {
-            txtTotalPrice.setText("");
+            int units = Integer.parseInt(noOfUnits);
+            if (units < 0) {
+                JOptionPane.showMessageDialog(null, "Number of units cannot be negative.");
+            } else {
+                int totalPrice = units * Integer.parseInt(price);
+                txtTotalPrice.setText(String.valueOf(totalPrice));
+            }
         }
+    } else {
+        txtTotalPrice.setText("");
+    }
     }//GEN-LAST:event_txtNoOfUnitsKeyReleased
 
     private void AddToCartButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddToCartButton

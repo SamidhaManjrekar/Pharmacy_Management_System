@@ -582,7 +582,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "UserID", "Name", "Date Of Birth", "Phone", "Email", "Address", "User Name", "Password", "Role"
+                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "User Name", "Password", "Role"
             }
         ));
         jTable1.setSelectionBackground(new java.awt.Color(153, 217, 217));
@@ -1029,7 +1029,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "UserID", "Name", "Date Of Birth", "Phone", "Email", "Address", "User Name", "Password", "Role"
+                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "User Name", "Password", "Role"
             }
         ));
         jTable2.setSelectionBackground(new java.awt.Color(153, 217, 217));
