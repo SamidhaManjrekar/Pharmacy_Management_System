@@ -96,6 +96,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton3 = new javax.swing.JButton();
+        jLabel44 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
         jPanel12 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -103,6 +105,14 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -123,6 +133,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
         jPanel15 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -152,7 +164,6 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jTextField18 = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -211,7 +222,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Gurmukhi MT", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Delete Users");
+        jLabel6.setText("Deleted Users");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -332,7 +343,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Gurmukhi MT", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("View Users");
+        jLabel10.setText("Manage User");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -445,7 +456,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel24.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel24.setText("Address");
+        jLabel24.setText("City Of Residence");
 
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
@@ -478,6 +489,12 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel44.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel44.setText("Salary");
+
+        jTextField19.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -489,18 +506,23 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel13Layout.createSequentialGroup()
                                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel13Layout.createSequentialGroup()
-                                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
                                             .addComponent(jLabel22)
-                                            .addComponent(jLabel23))
-                                        .addGap(27, 27, 27)
-                                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField7)
-                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGap(27, 27, 27)
+                                            .addComponent(jTextField7))
+                                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel13Layout.createSequentialGroup()
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jLabel23)
+                                        .addGap(43, 43, 43)
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                        .addComponent(jLabel44)
+                                        .addGap(82, 82, 82)
+                                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(39, 39, 39)
                                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel25)
@@ -528,36 +550,41 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel21)
                 .addGap(58, 58, 58)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel27))
-                        .addGap(32, 32, 32)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel26))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel25))
-                        .addGap(26, 26, 26)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel25)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23))))
+                        .addGap(25, 25, 25)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel24)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel44)))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34))
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel13Layout.createSequentialGroup()
                                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51)
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel23)))
-                            .addComponent(jLabel22))))
-                .addGap(34, 34, 34)
+                                .addGap(2, 2, 2))
+                            .addComponent(jLabel22))
+                        .addGap(62, 62, 62)))
                 .addComponent(jButton3)
                 .addContainerGap(87, Short.MAX_VALUE))
         );
@@ -582,7 +609,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "User Name", "Password", "Role"
+                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "Salary", "User Name", "Role"
             }
         ));
         jTable1.setSelectionBackground(new java.awt.Color(153, 217, 217));
@@ -612,6 +639,45 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         jLabel42.setForeground(new java.awt.Color(153, 153, 153));
         jLabel42.setText("Name");
 
+        jButton7.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jButton7.setText("Delete");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7deleteButton(evt);
+            }
+        });
+
+        jLabel46.setFont(new java.awt.Font("Noto Sans NKo", 0, 40)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel46.setText("Delete User");
+
+        jLabel47.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(153, 217, 217));
+        jLabel47.setText("Select User To Be Deleted");
+
+        jLabel48.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(153, 217, 217));
+        jLabel48.setText("Input Percentage");
+
+        jLabel49.setFont(new java.awt.Font("Noto Sans NKo", 0, 40)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel49.setText("Update Salary");
+
+        jTextField21.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jTextField21.setForeground(new java.awt.Color(153, 217, 217));
+
+        jButton5.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jButton5.setText("Update Salary");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jLabel50.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(153, 217, 217));
+        jLabel50.setText("%");
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -619,19 +685,45 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(436, 436, 436))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1041, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel42)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(436, 436, 436))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1041, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                        .addComponent(jLabel42)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel12Layout.createSequentialGroup()
+                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(293, 293, 293)
+                                        .addComponent(jButton5))
+                                    .addGroup(jPanel12Layout.createSequentialGroup()
+                                        .addComponent(jLabel47)
+                                        .addGap(194, 194, 194)
+                                        .addComponent(jLabel48)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel50)
+                                .addGap(196, 196, 196))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel46)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel49)
+                                .addGap(185, 185, 185))))))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -645,8 +737,22 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                         .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel42)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel49)
+                    .addComponent(jLabel46))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel48)
+                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel47)
+                    .addComponent(jLabel50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7))
+                .addGap(50, 50, 50))
         );
 
         jPanel10.add(jPanel12, "card3");
@@ -700,7 +806,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel19.setText("Address");
+        jLabel19.setText("City Of Residence");
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
@@ -717,6 +823,12 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jTextField5.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
 
+        jLabel45.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel45.setText("Salary");
+
+        jTextField20.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -727,19 +839,21 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13)
-                    .addComponent(jLabel14))
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel45))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField20)
                     .addComponent(jComboBox1, 0, 300, Short.MAX_VALUE)
                     .addComponent(jTextField1)
                     .addComponent(jTextField2)
                     .addComponent(jTextField5))
                 .addGap(54, 54, 54)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel18)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
@@ -766,22 +880,6 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField5)))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16))
                         .addGap(32, 32, 32)
@@ -794,11 +892,32 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel18))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(44, 44, 44)
-                .addComponent(jButton2)
-                .addGap(78, 78, 78))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
+                        .addComponent(jButton2)
+                        .addGap(78, 78, 78))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel14)
+                            .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField5))
+                        .addGap(187, 187, 187))))
         );
 
         jPanel10.add(jPanel11, "card2");
@@ -819,7 +938,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel33.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel33.setText("Password");
+        jLabel33.setText("Salary");
 
         jTextField12.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
 
@@ -851,7 +970,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel37.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel37.setText("Address");
+        jLabel37.setText("City Of Residence");
 
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
@@ -920,25 +1039,26 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel28))
                         .addGap(441, 441, 441))))
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(jLabel33)
-                        .addGap(43, 43, 43)
-                        .addComponent(jTextField12))
-                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel15Layout.createSequentialGroup()
-                            .addComponent(jLabel32)
-                            .addGap(27, 27, 27)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel15Layout.createSequentialGroup()
-                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel32)
+                                .addGap(27, 27, 27)
+                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel33)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
@@ -1016,7 +1136,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
 
         jLabel29.setFont(new java.awt.Font("Noto Sans NKo", 0, 40)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(81, 182, 182));
-        jLabel29.setText("Delete User");
+        jLabel29.setText("Deleted Users");
 
         jTable2.setBackground(new java.awt.Color(153, 217, 217));
         jTable2.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
@@ -1029,7 +1149,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "User Name", "Password", "Role"
+                "UserID", "Name", "Date Of Birth", "Phone", "Email", "City", "Salary", "User Name", "Role"
             }
         ));
         jTable2.setSelectionBackground(new java.awt.Color(153, 217, 217));
@@ -1052,14 +1172,6 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
-        jButton6.setText("Delete");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButton(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -1076,13 +1188,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                        .addComponent(jLabel29)
-                        .addGap(442, 442, 442))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                        .addComponent(jButton6)
-                        .addGap(481, 481, 481))))
+                .addComponent(jLabel29)
+                .addGap(442, 442, 442))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1095,9 +1202,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton6)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         jPanel10.add(jPanel16, "card7");
@@ -1225,7 +1330,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         String role = (String) jComboBox1.getSelectedItem();
         String name = jTextField1.getText();
         String userName = jTextField2.getText();
-        String password = jTextField5.getText();
+        String password = jTextField20.getText();
+        String salary = jTextField5.getText();
         String email = jTextField3.getText();
         String phone = jTextField4.getText();
         String address = jTextArea1.getText();
@@ -1233,8 +1339,9 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         Date selectedDate = jDateChooser1.getDate();
         Date currentDate = new Date();
 
-        if (name.isEmpty() || userName.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty()) {
+        if (name.isEmpty() || userName.isEmpty() || salary.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
 
         if (selectedDate != null) {
@@ -1243,13 +1350,15 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 return;
             }
 
-            SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
             dateOfBirth = dFormat.format(selectedDate);
         }
+
         checkUsername(userName);
         if (check == 1) {
             JOptionPane.showMessageDialog(this, "User Name Taken!", "Error", JOptionPane.ERROR_MESSAGE);
             jTextField2.setText("");
+            return;
         }
 
         if (!email.matches(emailPattern)) {
@@ -1261,41 +1370,48 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         if (phone.length() != 10 || !phone.matches(phonePattern)) {
             JOptionPane.showMessageDialog(this, "Invalid phone number!", "Error", JOptionPane.ERROR_MESSAGE);
             jTextField4.setText("");
-        } else {
-            try {
-                Connection con = ConnectionProvider.getCon();
-                String sql = "INSERT INTO USER (name, UserName, Password, DateOfBirth, address, phone, email, role) "
-                        + "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-                PreparedStatement stmt = con.prepareStatement(sql);
-                stmt.setString(1, name);
-                stmt.setString(2, userName);
-                stmt.setString(3, password);
-                stmt.setString(4, dateOfBirth);
-                stmt.setString(5, address);
-                stmt.setString(6, phone);
-                stmt.setString(7, email);
-                stmt.setString(8, role);
+            return;
+        }
 
-                stmt.executeUpdate();
+        try {
+            Connection con = ConnectionProvider.getCon();
+            String sql = "INSERT INTO USER (Name, DateOfBirth, Phone, Email, Address, UserName, Password, Salary, Role) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, name);
+            stmt.setString(2, dateOfBirth);
+            stmt.setString(3, phone);
+            stmt.setString(4, email);
+            stmt.setString(5, address);
+            stmt.setString(6, userName);
+            stmt.setString(7, password);
+            stmt.setString(8, salary);
+            stmt.setString(9, role);
 
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
                 JOptionPane.showMessageDialog(null, "Account created successfully!");
                 jTextField1.setText("");
                 jTextField2.setText("");
                 jTextField3.setText("");
                 jTextField4.setText("");
                 jTextField5.setText("");
+                jTextField20.setText("");
                 jDateChooser1.setDate(null);
                 jTextArea1.setText("");
                 jComboBox1.removeAllItems();
                 jComboBox1.addItem("Admin");
                 jComboBox1.addItem("Pharmacist");
-
-                con.close();
-                stmt.close();
-
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(this, "Error occurred while registering user: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Failed to create account!");
             }
+
+            con.close();
+            stmt.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error occurred while registering user: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_addUserButton
 
@@ -1305,7 +1421,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "SELECT * FROM USER";
+            String sql = "SELECT * FROM USER_VIEW";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             model.setRowCount(0);
@@ -1317,8 +1433,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     rs.getString("Phone"),
                     rs.getString("Email"),
                     rs.getString("Address"),
+                    rs.getString("Salary"),
                     rs.getString("UserName"),
-                    rs.getString("Password"),
                     rs.getString("Role")
                 };
                 model.addRow(row);
@@ -1347,6 +1463,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                 jTextField8.setText(rs.getString("Password"));
                 jTextField9.setText(rs.getString("Phone"));
                 jTextField10.setText(rs.getString("Email"));
+                jTextField19.setText(rs.getString("Salary"));
                 jTextArea2.setText(rs.getString("Address"));
                 SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
                 String dateOfBirth = rs.getString("DateOfBirth");
@@ -1390,14 +1507,14 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "SELECT * FROM USER WHERE Name LIKE ?";
+            String sql = "SELECT * FROM USER_VIEW WHERE Name LIKE ?";
             PreparedStatement stmt = con.prepareStatement(sql);
 
             if (search.isEmpty()) {
-                sql = "SELECT * FROM USER";
+                sql = "SELECT * FROM USER_VIEW";
                 stmt = con.prepareStatement(sql);
             } else {
-                sql = "SELECT * FROM USER WHERE Name LIKE ?";
+                sql = "SELECT * FROM USER_VIEW WHERE Name LIKE ?";
                 stmt = con.prepareStatement(sql);
                 stmt.setString(1, "%" + search + "%");
             }
@@ -1413,8 +1530,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     rs.getString("Phone"),
                     rs.getString("Email"),
                     rs.getString("Address"),
+                    rs.getString("Salary"),
                     rs.getString("UserName"),
-                    rs.getString("Password"),
                     rs.getString("Role")
                 };
                 model.addRow(row);
@@ -1445,6 +1562,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         String email = jTextField10.getText();
         String phone = jTextField9.getText();
         String address = jTextArea2.getText();
+        String salary = jTextField19.getText();
         String dateOfBirth = "";
         Date selectedDate = jDateChooser2.getDate();
         Date currentDate = new Date();
@@ -1459,7 +1577,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             dateOfBirth = dFormat.format(selectedDate);
         }
 
-        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
+        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || salary.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -1485,7 +1603,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         }
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "UPDATE USER SET UserName = ?, Password = ?, DateOfBirth = ?, address = ?, phone = ?, email = ? WHERE name = ?";
+            String sql = "UPDATE USER SET UserName = ?, Password = ?, DateOfBirth = ?, address = ?, phone = ?, email = ?, salary = ? WHERE name = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, username);
             stmt.setString(2, password);
@@ -1493,7 +1611,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             stmt.setString(4, address);
             stmt.setString(5, phone);
             stmt.setString(6, email);
-            stmt.setString(7, name);
+            stmt.setString(7, salary);
+            stmt.setString(8, name);
 
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {
@@ -1515,7 +1634,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         String role = (String) jComboBox2.getSelectedItem();
         String name = jTextField14.getText();
         String userName = jTextField13.getText();
-        String password = jTextField12.getText();
+        String salary = jTextField12.getText();
         String email = jTextField16.getText();
         String phone = jTextField15.getText();
         String address = jTextArea3.getText();
@@ -1533,7 +1652,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             dateOfBirth = dFormat.format(selectedDate);
         }
 
-        if (name.isEmpty() || userName.isEmpty() || password.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
+        if (name.isEmpty() || userName.isEmpty() || salary.isEmpty() || address.isEmpty() || phone.isEmpty() || email.isEmpty() || dateOfBirth.isEmpty()) {
             JOptionPane.showMessageDialog(null, "All fields are required!", "Input Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -1558,10 +1677,10 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         }
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "UPDATE USER SET UserName = ?, Password = ?, DateOfBirth = ?, address = ?, phone = ?, email = ?, role = ? WHERE name = ?";
+            String sql = "UPDATE USER SET UserName = ?, salary = ?, DateOfBirth = ?, address = ?, phone = ?, email = ?, role = ? WHERE name = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, userName);
-            stmt.setString(2, password);
+            stmt.setString(2, salary);
             stmt.setString(3, dateOfBirth);
             stmt.setString(4, address);
             stmt.setString(5, phone);
@@ -1607,7 +1726,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     jTextField14.setText(rs.getString("name"));
                     jTextField14.setEditable(false);
                     jTextField13.setText(rs.getString("UserName"));
-                    jTextField12.setText(rs.getString("Password"));
+                    jTextField12.setText(rs.getString("salary"));
                     jTextField15.setText(rs.getString("Phone"));
                     jTextField16.setText(rs.getString("Email"));
                     jTextArea3.setText(rs.getString("Address"));
@@ -1654,18 +1773,17 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         //To search for user in Delete user page
 
         String search = jTextField18.getText();
-
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "SELECT * FROM USER WHERE Name LIKE ?";
+            String sql = "SELECT * FROM delUser_VIEW WHERE Name LIKE ?";
             PreparedStatement stmt = con.prepareStatement(sql);
 
             if (search.isEmpty()) {
-                sql = "SELECT * FROM USER";
+                sql = "SELECT * FROM delUser_VIEW";
                 stmt = con.prepareStatement(sql);
             } else {
-                sql = "SELECT * FROM USER WHERE Name LIKE ?";
+                sql = "SELECT * FROM delUser_VIEW WHERE Name LIKE ?";
                 stmt = con.prepareStatement(sql);
                 stmt.setString(1, "%" + search + "%");
             }
@@ -1681,8 +1799,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     rs.getString("Phone"),
                     rs.getString("Email"),
                     rs.getString("Address"),
+                    rs.getString("Salary"),
                     rs.getString("UserName"),
-                    rs.getString("Password"),
                     rs.getString("Role")
                 };
                 model.addRow(row);
@@ -1701,7 +1819,7 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "SELECT * FROM USER";
+            String sql = "SELECT * FROM delUser_VIEW";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             model.setRowCount(0);
@@ -1713,8 +1831,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
                     rs.getString("Phone"),
                     rs.getString("Email"),
                     rs.getString("Address"),
+                    rs.getString("Salary"),
                     rs.getString("UserName"),
-                    rs.getString("Password"),
                     rs.getString("Role")
                 };
                 model.addRow(row);
@@ -1726,41 +1844,6 @@ public class Admin_Dashboard extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_showDeleteTable
-
-    private void deleteButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButton
-        int index = jTable2.getSelectedRow();
-        if (index == -1) {
-            JOptionPane.showMessageDialog(this, "Please select a user to delete!", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        TableModel model = jTable2.getModel();
-        String id = model.getValueAt(index, 0).toString();
-        String nameTable = model.getValueAt(index, 1).toString();
-        String name = jLabel3.getText();
-        int choice = JOptionPane.showConfirmDialog(null, "Do you want to delete this user?", "Confirmation", JOptionPane.YES_NO_OPTION);
-        if (choice == JOptionPane.YES_OPTION) {
-            try {
-                Connection con = ConnectionProvider.getCon();
-                PreparedStatement stmt = con.prepareStatement("DELETE FROM USER WHERE UserID=?");
-                stmt.setString(1, id);
-                stmt.executeUpdate();
-                JOptionPane.showMessageDialog(null, "User successfully deleted!");
-                DefaultTableModel tableModel = (DefaultTableModel) jTable2.getModel();
-                tableModel.removeRow(index);
-                if (nameTable.equals(name)) {
-                    setVisible(false);
-                    new Login().setVisible(true); // Show login page only if the currently logged-in user is being deleted
-                }
-
-                con.close();
-                stmt.close();
-
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    }//GEN-LAST:event_deleteButton
 
     private void jTextField6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyTyped
         // TODO add your handling code here:
@@ -1781,6 +1864,119 @@ public class Admin_Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         flag = 1;
     }//GEN-LAST:event_jTextField13KeyTyped
+
+    private void jButton7deleteButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7deleteButton
+        // TODO add your handling code here:
+        int index = jTable1.getSelectedRow();
+        if (index == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a user to delete!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        TableModel model = jTable1.getModel();
+        String id = model.getValueAt(index, 0).toString();
+        String nameTable = model.getValueAt(index, 1).toString();
+        String name = jLabel3.getText();
+        int choice = JOptionPane.showConfirmDialog(null, "Do you want to delete this user?", "Confirmation", JOptionPane.YES_NO_OPTION);
+        if (choice == JOptionPane.YES_OPTION) {
+            try {
+                Connection con = ConnectionProvider.getCon();
+                PreparedStatement stmt = con.prepareStatement("DELETE FROM USER WHERE UserID=?");
+                stmt.setString(1, id);
+                stmt.executeUpdate();
+                JOptionPane.showMessageDialog(null, "User successfully deleted!");
+                DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+                tableModel.removeRow(index);
+                if (nameTable.equals(name)) {
+                    setVisible(false);
+                    new Login().setVisible(true);
+                }
+
+                con.close();
+                stmt.close();
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_jButton7deleteButton
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+
+        int index = jTable1.getSelectedRow();
+        if (index == -1) {
+            JOptionPane.showMessageDialog(this, "Please select a user!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        TableModel model = jTable1.getModel();
+        double percentage;
+        try {
+            String inputText = jTextField21.getText();
+
+            if (inputText.isEmpty() || Double.parseDouble(inputText) < 0) {
+                JOptionPane.showMessageDialog(this, "Invalid percentage value!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            percentage = Double.parseDouble(inputText);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid percentage value!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        String id = model.getValueAt(index, 0).toString();
+        int choice = JOptionPane.showConfirmDialog(null, "Do you want to update this user's salary?", "Confirmation", JOptionPane.YES_NO_OPTION);
+        if (choice == JOptionPane.YES_OPTION) {
+            try {
+                Connection con = ConnectionProvider.getCon();
+                PreparedStatement stmt = con.prepareStatement("call update_pharmacist_salary_by_pharmacy (?, ?)");
+                stmt.setString(1, id);
+                stmt.setDouble(2, percentage);
+                stmt.executeUpdate();
+                JOptionPane.showMessageDialog(null, "User's salary updated successfully!");
+                DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+                loadUserData();
+                con.close();
+                stmt.close();
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void loadUserData() {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        try {
+            Connection con = ConnectionProvider.getCon();
+            String sql = "SELECT * FROM USER_VIEW";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            model.setRowCount(0);
+            while (rs.next()) {
+                Object[] row = {
+                    rs.getInt("UserID"),
+                    rs.getString("Name"),
+                    rs.getString("DateOfBirth"),
+                    rs.getString("Phone"),
+                    rs.getString("Email"),
+                    rs.getString("Address"),
+                    rs.getString("Salary"),
+                    rs.getString("UserName"),
+                    rs.getString("Role")
+                };
+                model.addRow(row);
+            }
+            con.close();
+            rs.close();
+            stmt.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error loading user data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -1822,7 +2018,8 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -1866,7 +2063,14 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1907,7 +2111,10 @@ public class Admin_Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

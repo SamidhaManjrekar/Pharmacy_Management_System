@@ -107,6 +107,8 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -172,6 +174,18 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel39 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel46 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -405,7 +419,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Gurmukhi MT", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("View Bill");
+        jLabel11.setText("Operations");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -573,6 +587,17 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel37.setFont(new java.awt.Font("Gurmukhi MT", 1, 24)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel37.setText("Salary");
+
+        jTextField14.setFont(new java.awt.Font("Gurmukhi MT", 0, 18)); // NOI18N
+        jTextField14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField14KeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -587,17 +612,21 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel27))
-                                .addGap(27, 27, 27)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField7)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel12Layout.createSequentialGroup()
                                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel27))
+                                    .addComponent(jLabel37))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField7)
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(39, 39, 39)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel30)
@@ -622,35 +651,38 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(84, 84, 84)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel28))
-                        .addGap(32, 32, 32)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel29))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel30))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel31)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(52, 52, 52)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51)
+                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel30)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel27)))
-                            .addComponent(jLabel26))))
+                                    .addComponent(jLabel27))))
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel31)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel37)))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(2, 2, 2))
+                        .addComponent(jLabel26)))
                 .addGap(34, 34, 34)
                 .addComponent(jButton3)
                 .addContainerGap(131, Short.MAX_VALUE))
@@ -1259,7 +1291,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Bill ID", "Date", "Total Amount", "Generated By"
+                "Bill ID", "Date", "Bill Total", "Generated By"
             }
         ));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1269,27 +1301,149 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
+        jLabel39.setFont(new java.awt.Font("Noto Sans NKo", 0, 40)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel39.setText("Monthly Sales");
+
+        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField15ActionPerformed(evt);
+            }
+        });
+
+        jLabel41.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel41.setText("For Month");
+
+        jLabel42.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel42.setText("Total Sales");
+
+        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField16ActionPerformed(evt);
+            }
+        });
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-search-50 (1).png"))); // NOI18N
+        jLabel43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel43searchView(evt);
+            }
+        });
+
+        jLabel44.setFont(new java.awt.Font("Noto Sans NKo", 0, 40)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel44.setText("Stock");
+
+        jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(81, 182, 182));
+        jLabel45.setText("Check For");
+
+        jComboBox3.setFont(new java.awt.Font("Gurmukhi MT", 0, 14)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None", "Lowest Stock", "Highest Stock" }));
+
+        jTable3.setBackground(new java.awt.Color(153, 217, 217));
+        jTable3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jTable3.setForeground(new java.awt.Color(255, 255, 255));
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "Item ID", "Item Name", "Item Stock", "Manufacturer"
+            }
+        ));
+        jTable3.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTable3ComponentShown(evt);
+            }
+        });
+        jScrollPane4.setViewportView(jTable3);
+
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icons8-search-50 (1).png"))); // NOI18N
+        jLabel46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel46searchView(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(504, Short.MAX_VALUE)
-                .addComponent(jLabel25)
-                .addGap(455, 455, 455))
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                                        .addComponent(jLabel41)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                                        .addComponent(jLabel42)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel45)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 923, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addGap(359, 359, 359)
+                                .addComponent(jLabel44)
+                                .addGap(150, 150, 150)))
+                        .addGap(91, 91, 91))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(455, 455, 455))))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel25)
-                .addGap(75, 75, 75)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(146, 146, 146)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel46)
+                                    .addComponent(jLabel45))
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel41))
+                                    .addComponent(jLabel43))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel42))))
+                        .addContainerGap(43, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(jLabel39))
+                        .addGap(175, 175, 175))))
         );
 
         jPanel4.add(jPanel17, "card7");
@@ -1549,6 +1703,8 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
                 jTextField8.setText(rs.getString("Password"));
                 jTextField9.setText(rs.getString("Phone"));
                 jTextField10.setText(rs.getString("Email"));
+                jTextField14.setText(rs.getString("Salary"));
+                jTextField14.setEditable(false);
                 jTextArea2.setText(rs.getString("Address"));
                 SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
                 String dateOfBirth = rs.getString("DateOfBirth");
@@ -1628,7 +1784,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         try {
             Connection con = ConnectionProvider.getCon();
-            String sql = "select * from medicine";
+            String sql = "select * from medicine order by stock asc";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             model.setRowCount(0);
@@ -1853,23 +2009,23 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
 
     private void txtNoOfUnitsKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNoOfUnitsKeyReleased
         // TODO add your handling code here:
-    String noOfUnits = txtNoOfUnits.getText();
-    if (!noOfUnits.equals("")) {
-        String price = txtPricePerUnit.getText();
-        if (!noOfUnits.matches(numberPattern)) {
-            JOptionPane.showMessageDialog(null, "Number of units field is invalid.");
-        } else {
-            int units = Integer.parseInt(noOfUnits);
-            if (units < 0) {
-                JOptionPane.showMessageDialog(null, "Number of units cannot be negative.");
+        String noOfUnits = txtNoOfUnits.getText();
+        if (!noOfUnits.equals("")) {
+            String price = txtPricePerUnit.getText();
+            if (!noOfUnits.matches(numberPattern)) {
+                JOptionPane.showMessageDialog(null, "Number of units field is invalid.");
             } else {
-                int totalPrice = units * Integer.parseInt(price);
-                txtTotalPrice.setText(String.valueOf(totalPrice));
+                int units = Integer.parseInt(noOfUnits);
+                if (units < 0) {
+                    JOptionPane.showMessageDialog(null, "Number of units cannot be negative.");
+                } else {
+                    int totalPrice = units * Integer.parseInt(price);
+                    txtTotalPrice.setText(String.valueOf(totalPrice));
+                }
             }
+        } else {
+            txtTotalPrice.setText("");
         }
-    } else {
-        txtTotalPrice.setText("");
-    }
     }//GEN-LAST:event_txtNoOfUnitsKeyReleased
 
     private void AddToCartButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddToCartButton
@@ -2086,6 +2242,119 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
         flag = 1;
     }//GEN-LAST:event_jTextField7KeyTyped
 
+    private void jTextField14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField14KeyTyped
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Salary cannot be changed!");
+    }//GEN-LAST:event_jTextField14KeyTyped
+
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+        // TODO add your handling code here:
+        jTextField15.setText("");
+    }//GEN-LAST:event_jTextField15ActionPerformed
+
+    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField16ActionPerformed
+
+    private void jLabel43searchView(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43searchView
+        // To search for user in View user page
+        String monthYear = jTextField15.getText();
+        if (monthYear.isEmpty()) {
+            jTextField16.setText("mm-yyyy");
+            return;
+        }
+
+        String sales = "SELECT getTotalSaleInMonth(?) AS totalSale";
+
+        try {
+            Connection con = ConnectionProvider.getCon();
+            PreparedStatement stmt = con.prepareStatement(sales);
+            stmt.setString(1, monthYear);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                double amount = rs.getDouble("totalSale");
+
+                jTextField16.setText(String.valueOf(amount));
+            } else {
+                jTextField16.setText("No data found");
+            }
+
+            // Close the resources
+            rs.close();
+            stmt.close();
+            con.close();
+
+        } catch (SQLException e) {
+            jTextField16.setText("Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_jLabel43searchView
+
+    private void jTable3ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTable3ComponentShown
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTable3ComponentShown
+
+    private void jLabel46searchView(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel46searchView
+        // TODO add your handling code here:
+        String selectedItem = (String) jComboBox3.getSelectedItem();
+        DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+        model.setRowCount(0);
+
+        if (selectedItem == null || selectedItem.equals("None")) {
+            model.setRowCount(0);
+        } else {
+            switch (selectedItem) {
+                case "Lowest Stock":
+                    try {
+                        Connection con = ConnectionProvider.getCon();
+                        PreparedStatement stmt = con.prepareStatement("{CALL find_lowest_stock()}");
+                        ResultSet rs = stmt.executeQuery();
+
+                        populateTable(rs);
+
+                        con.close();
+                        stmt.close();
+                        rs.close();
+                    } catch (SQLException e) {
+                        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    break;
+                case "Highest Stock":
+                    try {
+                        Connection con = ConnectionProvider.getCon();
+                        PreparedStatement stmt = con.prepareStatement("{CALL find_highest_stock()}");
+                        ResultSet rs = stmt.executeQuery();
+
+                        populateTable(rs);
+
+                        con.close();
+                        stmt.close();
+                        rs.close();
+                    } catch (SQLException e) {
+                        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }//GEN-LAST:event_jLabel46searchView
+    private void populateTable(ResultSet rs) throws SQLException {
+        DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+        model.setRowCount(0); 
+
+        while (rs.next()) {
+            Object[] row = {
+                rs.getInt("itemID"),
+                rs.getString("name"),
+                rs.getLong("stock"),
+                rs.getString("manufacturer")
+            };
+            model.addRow(row);
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -2132,6 +2401,7 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2163,9 +2433,17 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
@@ -2200,16 +2478,21 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
@@ -2232,7 +2515,9 @@ public class Pharmacist_Dashboard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String userName = "";
     private int check;
+    private String sales;
     private int flag = 0;
+    private double amount = 0;
     private int finalTotalPrice = 0;
     private String billId = "";
     private Color DefaultColor, ClickedColor;
