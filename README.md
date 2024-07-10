@@ -1,4 +1,4 @@
-# Pharmacy-Management-System
+# Pharmacy Management System
 The Online Pharmacy Management System is a comprehensive solution designed to streamline the operations of a pharmacy by providing an online platform for both pharmacists and customers. The system facilitates easy management of inventory, prescription processing, patient management, billing, and reporting, enhancing efficiency and improving patient care. Built using Java programming language with NetBeans IDE, and utilizing SQL for database management, the system offers a user-friendly interface and robust functionality to meet the needs of modern pharmacies.
 
 ## Inventory Management: 
